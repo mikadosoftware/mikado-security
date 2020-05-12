@@ -9,7 +9,23 @@
 
 ###
 
-""":mod:`sessioncache` is a standalone module providing the ability to
+"""
+Notes from 2019: this is an old work-for-hire from some years ago, 
+but is worth revisiting and discussing.  
+
+I think this was a valid approach, but it suffers greatly from reply
+attacks - if you can sniff my cookie, you can impersonate me.  Sniffing
+the TLS session should provide a lot of protection, but at what point do we
+stop and make every request validate itself - surely the CPU power now exists?
+
+I think I am going to prefer to move entirely to client certificates / U2F
+
+So this is provided as an example of a good days work, but I think cookies have
+had their day.
+/End notes from 2019
+
+
+:mod:`sessioncache` is a standalone module providing the ability to
 control persistent-session client cookies and profile-cookies.
 
 :mod:`sessioncache.py` is a "low-level" piece, and is expected to be used
